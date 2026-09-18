@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORA BARBERSHOP - حلاقة فاخرة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <nav class="navbar">
+    <div class="nav-container">
+
+        <a href="#home" class="nav-logo">
+            <img
+                src="/الصور/Transparent_background_logo_adju__2K_20260919001242-removebg-preview.png"
+                alt="MORA Salon"
+                id="logoImage"
+            >
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#services">الخدمات</a></li>
+            <li><a href="#team">الفريق</a></li>
+            <li><a href="#booking" class="nav-cta">احجز الآن</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="فتح القائمة">
+            <span class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+
+    </div>
+</nav>
+
+        <div class="hero-content">
+            <div class="hero-badge">✧ PREMIUM GROOMING</div>
+            <h1 class="hero-title">
+                <span class="highlight">YOUR STYLE.</span><br>
+                YOUR CHAIR.<br>
+                <span class="highlight">YOUR TIME.</span>
+            </h1>
+            <p class="hero-subtitle">خدمة حلاقة فاخرة مصممة خصيصاً لك</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn-primary">
+                    <i class="fas fa-scissors"></i> احجز موعدك
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    استكشف الخدمات
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">عميل سعيد</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4.9</span>
+                    <span class="stat-label">تقييم العملاء</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">حلاقين محترفين</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <span class="section-badge">✦ خدماتنا</span>
+            <h2>قص مثالي في كل مرة</h2>
+            <p>نقدم لك أفضل خدمات الحلاقة بأعلى معايير الجودة</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">💇</div>
+                <h3>حلاقة كلاسيك</h3>
+                <p>قص احترافي يناسب جميع الأذواق</p>
+                <div class="service-meta">
+                    <span><i class="far fa-clock"></i> 30 دقيقة</span>
+                    <span class="service-price">١٥٠ ج.م</span>
+                </div>
+                <button class="btn-service-book" onclick="bookService('حلاقة كلاسيك', 150)">احجز الآن</button>
+            </div>
+
+            <div class="service-card featured">
+                <div class="service-badge">الأكثر طلباً</div>
+                <div class="service-icon">✂️</div>
+                <h3>حلاقة + دقن</h3>
+                <p>تشذيب الشعر والدقن مع قصة عصرية متكاملة</p>
+                <div class="service-meta">
+                    <span><i class="far fa-clock"></i> 45 دقيقة</span>
+                    <span class="service-price">٢٢٠ ج.م</span>
+                </div>
+                <button class="btn-service-book" onclick="bookService('شعر + دقن', 220)">احجز الآن</button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🌟</div>
+                <h3>شعر  </h3>
+                <p>تدرج مثالي للحصول على مظهر أنيق</p>
+                <div class="service-meta">
+                    <span><i class="far fa-clock"></i> 30 دقيقة</span>
+                    <span class="service-price">١٨٠ ج.م</span>
+                </div>
+                <button class="btn-service-book" onclick="bookService('شعر ', 180)">احجز الآن</button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🧔</div>
+                <h3> دقن</h3>
+                <p>تهذيب وتشكيل الدقن بأسلوب احترافي</p>
+                <div class="service-meta">
+                    <span><i class="far fa-clock"></i> 20 دقيقة</span>
+                    <span class="service-price">١٢٠ ج.م</span>
+                </div>
+                <button class="btn-service-book" onclick="bookService('دقن', 120)">احجز الآن</button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">👦</div>
+                <h3>حلاقة أطفال</h3>
+                <p>قص لطيف وآمن للأطفال</p>
+                <div class="service-meta">
+                    <span><i class="far fa-clock"></i> 20 دقيقة</span>
+                    <span class="service-price">١٢٠ ج.م</span>
+                </div>
+                <button class="btn-service-book" onclick="bookService('حلاقة أطفال', 120)">احجز الآن</button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3>حلاقة + استشوار</h3>
+                <p>تصفيف كامل مع قصة عصرية</p>
+                <div class="service-meta">
+                    <span><i class="far fa-clock"></i> 40 دقيقة</span>
+                    <span class="service-price">٢٠٠ ج.م</span>
+                </div>
+                <button class="btn-service-book" onclick="bookService('حلاقة + استشوار', 200)">احجز الآن</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TEAM SECTION ===== -->
+    <section class="team" id="team">
+        <div class="section-header">
+            <span class="section-badge">✦ فريقنا</span>
+            <h2>أيادي خبراء. ستايل حقيقي</h2>
+            <p>فريق من أفضل الحلاقين المحترفين في خدمتك</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-image" style="background: linear-gradient(135deg, #2d3436, #636e72);">
+                    <img src="/الصور/عمر.jpeg" alt="">
+                </div>
+                <h3>عمر أشرف</h3>
+                <p class="team-role">متخصص في جميع القصات ال
+                  احترافيه
+                </p>
+                <div class="team-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.9 (120)</span>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-image" style="background: linear-gradient(135deg, #2c3e50, #34495e);">
+                    <img src="/الصور/رفعت.jpeg" alt="">
+                </div>
+                <h3>رفعت </h3>
+                <p class="team-role">متخصص في الدمج</p>
+                <div class="team-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.8 (98)</span>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-image" style="background: linear-gradient(135deg, #2d3436, #636e72);">
+                    <span class="team-emoji">🧔</span>
+                </div>
+                <h3>أدهم</h3>
+                <p class="team-role">متخصص في التصفيف</p>
+                <div class="team-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.9 (110)</span>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-image" style="background: linear-gradient(135deg, #2c3e50, #34495e);">
+                    <span class="team-emoji">👨‍🦳</span>
+                </div>
+                <h3>ياسر</h3>
+                <p class="team-role">خبير شامل</p>
+                <div class="team-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.7 (86)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BOOKING SECTION ===== -->
+    <section class="booking-section" id="booking">
+        <div class="booking-container">
+            <div class="booking-info">
+                <span class="section-badge">✦ احجز الآن</span>
+                <h2>جاهز لإطلالتك الجديدة؟</h2>
+                <p>احجز مقعدك اليوم واستمتع بتجربة MORO الفريدة</p>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="fas fa-crown"></i>
+                        <div>
+                            <h4>جودة فائقة</h4>
+                            <p>أفضل المنتجات والمعايير العالمية</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <div>
+                            <h4>حجز سهل</h4>
+                            <p>احجز دورك في ثوانٍ من أي مكان</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-spa"></i>
+                        <div>
+                            <h4>راحة تامة</h4>
+                            <p>مساحة حديثة مصممة خصيصاً لك</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h4>نظافة معقمة</h4>
+                            <p>أدوات معقمة وبيئة صحية دائماً</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-form-wrapper">
+                <form id="bookingForm" class="booking-form">
+                    <h3>احجز دورك الآن</h3>
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="الاسم الكامل" required>
+                        <i class="fas fa-user form-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="رقم الموبايل" required>
+                        <i class="fas fa-phone form-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" required>
+                            <option value="">اختر الخدمة</option>
+                            <option value="حلاقة كلاسيك">💇 حلاقة كلاسيك - ١٥٠ ج.م</option>
+                            <option value="حلاقة + لحية">✂️ حلاقة + لحية - ٢٢٠ ج.م</option>
+                            <option value="سكن فيد">🌟 سكن فيد - ١٨٠ ج.م</option>
+                            <option value="تشذيب لحية">🧔 تشذيب لحية - ١٢٠ ج.م</option>
+                            <option value="حلاقة أطفال">👦 حلاقة أطفال - ١٢٠ ج.م</option>
+                            <option value="حلاقة + استشوار">✨ حلاقة + استشوار - ٢٠٠ ج.م</option>
+                        </select>
+                        <i class="fas fa-cut form-icon"></i>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-scissors"></i> احجز الآن
+                    </button>
+                    <p id="message" class="form-message"></p>
+                    <p class="form-note">🔹 سيتم إعلامك بدورك فور التأكيد</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== QUEUE SECTION ===== -->
+    <section class="queue-section" id="queue">
+        <div class="section-header">
+            <span class="section-badge">✦ قائمة الانتظار</span>
+            <h2>الدور الحالي والقادم</h2>
+            <p>تعرف على ترتيبك في قائمة الانتظار</p>
+        </div>
+
+        <div class="queue-container">
+            <div class="my-ticket" id="myTicket" style="display: none;">
+                <div class="my-ticket-label">
+                    <i class="fas fa-ticket-alt"></i> رقمك في الطابور
+                </div>
+                <div class="my-ticket-number" id="myTicketNumber">#1</div>
+                <div class="my-ticket-status" id="myTicketStatus"></div>
+            </div>
+
+            <div class="queue-current">
+                <div class="queue-card current-card">
+                    <div class="queue-icon">👤</div>
+                    <div class="queue-info">
+                        <span class="queue-label">العميل الحالي</span>
+                        <span id="currentCustomer" class="queue-name">لا أحد</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="queue-list-wrapper">
+                <h3>القائمة القادمة</h3>
+                <ul id="queueList" class="queue-list">
+                    <li class="empty-queue">
+                        <i class="fas fa-ticket-alt"></i>
+                        <span>لا يوجد عملاء في الانتظار</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <span class="section-badge">✦ اتصل بنا</span>
+            <h2>نحن هنا لخدمتك</h2>
+            <p>تواصل معنا لأي استفسار أو حجز خاص</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>العنوان</h4>
+                        <p>  ميت غمر ,الشارع الجديد</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>الهاتف</h4>
+                        <p>+20 123 456 7890</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>البريد الإلكتروني</h4>
+                        <p>info@mora-barbershop.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>ساعات العمل</h4>
+                        <p>السبت - الخميس: 10 ص - 10 م</p>
+                        <p>الجمعة: 11 ص - 9 م</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-social">
+                <h3>تابعنا على</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-icon">✂️</span>
+                <span class="logo-text">MORA</span>
+                <span class="logo-sub">BARBERSHOP</span>
+                <p>خدمة حلاقة فاخرة بخبرة احترافية. لأنك تستحق الأفضل.</p>
+            </div>
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#team">الفريق</a></li>
+                    <li><a href="#booking">حجز</a></li>
+                </ul>
+            </div>
+            <div class="footer-hours">
+                <h4>ساعات العمل</h4>
+                <ul>
+                    <li>السبت - الخميس: 10 ص - 10 م</li>
+                    <li>الجمعة: 11 ص - 9 م</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 MORA BARBERSHOP. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script type="module" src="client.js"></script>
+    <script>
+        // ===== Smooth Scroll =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ===== Mobile Nav Toggle =====
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navbar = document.querySelector('.navbar');
+
+        function closeMobileMenu() {
+            navLinks.classList.remove('active');
+            navToggle.classList.remove('active');
+        }
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active', isOpen);
+        });
+
+        // Close mobile menu when tapping outside it
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') &&
+                !navLinks.contains(e.target) &&
+                !navToggle.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
+
+        // ===== Shrink navbar on scroll =====
+        function updateNavbarScroll() {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        }
+        updateNavbarScroll();
+        window.addEventListener('scroll', updateNavbarScroll, { passive: true });
+
+        // ===== Service Booking =====
+        function bookService(service, price) {
+            const serviceSelect = document.getElementById('service');
+            const options = serviceSelect.options;
+            for (let opt of options) {
+                if (opt.text.includes(service)) {
+                    serviceSelect.value = opt.value;
+                    break;
+                }
+            }
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('name').focus();
+        }
+
+        // ===== Close mobile nav on link click =====
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // ===== Intersection Observer for animations =====
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.service-card, .team-card, .feature-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
